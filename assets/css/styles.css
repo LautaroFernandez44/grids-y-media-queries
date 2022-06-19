@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+ 
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:"header header"
+                        "caroimg1 texto"
+                        "mininav footer";
+    
+                               
+}
+
+
+
+
+
+.section1{
+    display: flex;
+    grid-area: texto;
+}
+
+.caro{
+    display: flex;
+    justify-content: center;
+    grid-area: caroimg1;
+}
+
+
+nav{
+    
+    border-radius: 5px;
+}
+
+body{
+    height: 100vh;
+    background-color: #e5e5e5;
+}
+
+
+.titulo{
+   
+    grid-area: header;
+    display:flex;
+    justify-content: center;
+    height: 125px;
+    width: 125px;
+    font-family: 'Island Moments', cursive;
+    font-size: 80px;
+    background-color: #cbcbcb;
+    border-radius: 50%;
+    padding: 15px; 
+    position: absolute;
+    left: 30%;
+    top: 5%;
+}
+
+
+
+.navbar{
+    
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background-color: #cbcbcb;
+    position: absolute;
+    left: 40%;
+    top: 8%;
+    
+   
+}
+
+.navbar ul{
+    list-style: none;
+    
+}
+
+
+.navbar ul li {
+    display: inline-block;
+    padding: 12px;
+    
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+a:hover{
+    color: #fff
+}
+
+
+
+img{
+    display: flex;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid red;
+}
+
+h2{
+    font-family: 'Inter';
+    font-size: 58px;
+    text-shadow: 0px 0px 4px #000;
+}
+
+h3{
+    font-family: 'Inter';
+    font-size: 35px;
+    text-shadow: 0px 0px 4px #000;
+}
+
+
+.footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    grid-area: footer;
+    
+}
+
+@media (max-width: 576px) {
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:"header"
+                            "caroimg1"
+                            "texto"
+                            "footer"
+                                   
+    }
+
+    .navbar{
+        left: 1%;
+        top: 135px;
+        
+        
+    }
+
+    .navbar ul li a{
+        font-size: 25px;
+        
+    }
+
+
+    .titulo{
+        left: 38%;
+        top: 0;
+        
+    }
+
+    .section1{
+        justify-self: center;
+    }
+}
+
+
+
